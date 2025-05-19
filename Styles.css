@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+.Italianno {
+  font-family: 'Italianno', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff0f5;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #cc0066;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 24px;
+  color: #99004d;
+  margin-bottom: 20px;
+}
+
+.foto-amor {
+  max-width: 300px;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-top: 30px;
+}
+
+button {
+  margin-top: 40px;
+  padding: 12px 25px;
+  font-size: 20px;
+  background-color: #cc0066;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #a0004d;
+}

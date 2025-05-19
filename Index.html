@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="Styles.css">
+  <meta charset="UTF-8">
+  <title>¿Quieres estar conmigo?</title>
+  <style>
+  
+  * {
+      font-family: 'Italianno', cursive;
+    }
+    
+    body {
+      font-family: 'Italianno';
+      background-color: #ffe6f0;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      color: #ff4d79;
+      font-size: 36px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 20px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background-color: #ff66a3;
+      color: white;
+    }
+
+    .no {
+      background-color: #d9d9d9;
+      color: #333;
+      position: relative;
+    }
+
+    #mensaje, #siguiente {
+      margin-top: 50px;
+      font-size: 24px;
+      color: #cc0066;
+    }
+
+    #siguiente {
+      display: none;
+    }
+
+    #btnContinuar {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #cc0066;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="Italianno">¿Quieres estar conmigo? 💕</h1>
+
+  <button class="btn yes Italianno" onclick="mostrarMensaje()">Sí 💘</button>
+  <button class="btn no Italianno" onmouseover="moverBoton(this)">No 🙅‍♀️</button>
+
+  <div id="mensaje"></div>
+  <div id="siguiente">
+    <p id="mensajeFinal">¡Me haces muy feliz con tu respuesta! 💖</p>
+    <button id="btnContinuar" onclick="irASiguiente()">Continuar ➡️</button>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById("mensaje").innerText = "¡Sabía que dirías que sí! ❤️";
+
+      setTimeout(() => {
+        document.getElementById("siguiente").style.display = "block";
+      }, 5000); // 5 segundos
+    }
+
+    function moverBoton(btn) {
+      const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+      btn.style.position = "absolute";
+      btn.style.left = `${x}px`;
+      btn.style.top = `${y}px`;
+    }
+
+    function irASiguiente() {
+      window.location.href = "pagina2.html";
+    }
+  </script>
+
+</body>
+</html>
