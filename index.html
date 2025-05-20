@@ -81,10 +81,14 @@
   <script>
     function mostrarMensaje() {
       document.getElementById("mensaje").innerText = "¡Sabía que dirías que sí! ❤️";
-
-      setTimeout(() => {
-        document.getElementById("siguiente").style.display = "block";
-      }, 5000); // 5 segundos
+      document.getElementById("siguiente").style.display = "block";
+      
+      const musica = document.getElementById("musica");
+    musica.play().catch((e) => {
+    console.log("El navegador bloqueó el autoplay. Se requiere interacción:", e);
+  });
+}
+     
     }
 
     function moverBoton(btn) {
@@ -99,6 +103,10 @@
       window.location.href = "pagina2.html";
     }
   </script>
+<audio id="musica" autoplay loop>
+  <source src="Stromae, Pomme - Ma Meilleure Ennemie (sub. español)  Arcane_ Season 2.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
 
 </body>
 </html>
